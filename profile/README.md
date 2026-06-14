@@ -1,69 +1,263 @@
-# Hey, this is the Karios community 👋
+# KariosOS
 
-**Karios** is an infrastructure platform for building and operating private
-clouds on FreeBSD. It brings together virtualization (bhyve VMs and jails),
-networking and IPAM, Kubernetes/OpenShift integration, DNS/DHCP, and
-monitoring into a single control plane with a web UI.
+[![License: AGPLv3](https://img.shields.io/badge/License-AGPLv3-blue.svg)]()
+[![Hypervisor: bhyve](https://img.shields.io/badge/Hypervisor-bhyve-red.svg)]()
+[![Storage: ZFS](https://img.shields.io/badge/Storage-ZFS-green.svg)]()
+[![Category: Infrastructure OS](https://img.shields.io/badge/Category-Infrastructure%20OS-orange.svg)]()
+[![API: First](https://img.shields.io/badge/API-First-brightgreen.svg)]()
 
-## Try Karios
+**KariosOS** is an open-source **Infrastructure Operating System (IaOS)** designed for building and operating modern private clouds, edge environments, and enterprise datacenters.
 
-The easiest way to experience Karios is to boot the prebuilt ISO:
+KariosOS unifies virtualization, storage, networking, IP address management, Kubernetes orchestration, DNS/DHCP services, observability, and automation into a single platform with a common API and management experience.
 
-- **Download**: [kariosbsd-14.3-custom.iso](https://s3.us-east-1.amazonaws.com/amzn-kariosbsd-14.3/kariosbsd-14.3-custom.iso)
-- **Install**: see [INSTALL.md](./INSTALL.md) for step-by-step installation instructions
+Instead of assembling and maintaining dozens of disconnected infrastructure products, operators can manage their entire environment through a unified control plane.
 
-## Why Karios?
+---
 
-- **Run VMs and jails on FreeBSD**: Manage bhyve virtual machines and jails
-  through a single API and UI, without hand-editing config files on each
-  host.
+## Why KariosOS?
 
-- **Manage networking and IPAM**: NetBox-backed DCIM/IPAM (via
-  [karios-atlas](./karios-atlas) and [karios-ipam](./karios-ipam)) for
-  prefixes, IP ranges, VLANs, and VRFs, with DNS/DHCP allocation handled
-  automatically.
+### Infrastructure as an Operating System
 
-- **Integrate with Kubernetes**: Provision and manage k3s/OpenShift clusters
-  alongside traditional VMs and jails from the same platform.
+KariosOS treats infrastructure as a single operating system rather than a collection of independent tools.
 
-- **DNS/DHCP out of the box**: Technitium-based DNS/DHCP integration keeps
-  lease and reservation data in sync with your IPAM source of truth.
+Compute, storage, networking, security, observability, and automation operate through a common platform, simplifying deployment and day-to-day operations.
 
-- **Observability built in**: Prometheus, Grafana, and InfluxDB integration
-  give you metrics and dashboards for hosts, VMs, and clusters out of the
-  box.
+### Enterprise Virtualization with bhyve
 
-- **One UI for everything**: [karios-web](./karios-web) provides a unified
-  web interface for VMs, jails, networking, clusters, and datacenter
-  inventory.
+KariosOS is built around the native **bhyve hypervisor**, providing lightweight, high-performance virtualization for modern workloads.
 
-## Components
+Capabilities include:
 
-This repository is the umbrella workspace for the Karios platform, made up
-of several services and libraries:
+- Virtual Machines
+- Templates & Cloning
+- Snapshots
+- Resource Management
+- API-Driven Provisioning
+- Multi-Node Infrastructure Management
+
+### ZFS-Native Storage
+
+Storage is integrated directly into the platform through **ZFS**, enabling:
+
+- Snapshots
+- Replication
+- Data Integrity
+- Storage Pool Management
+- Automated Provisioning
+
+### Unified Operations
+
+Manage infrastructure from a single platform:
+
+- Virtual Machines
+- Containers & Kubernetes
+- Networking
+- IP Address Management
+- DNS & DHCP
+- Storage
+- Monitoring
+- Datacenter Inventory
+
+### API First
+
+Every capability exposed through the user interface is available through APIs and automation workflows.
+
+### Open Source
+
+KariosOS Community Edition is developed openly and welcomes community participation.
+
+---
+
+## Quick Start
+
+Download the latest KariosOS release from the Releases page.
+
+### Installation
+
+1. Download the [latest ISO](https://s3.us-east-1.amazonaws.com/amzn-kariosbsd-14.3/kariosbsd-14.3-custom.iso)
+2. Boot the installer
+3. Complete onboarding
+4. Access the KariosOS web interface
+5. Start deploying infrastructure
+
+Detailed installation instructions are available in [INSTALL.md](INSTALL.md).
+
+---
+
+## Core Capabilities
+
+### Virtualization
+
+- bhyve Virtual Machines
+- VM Templates
+- Snapshots & Cloning
+- Resource Scheduling
+- Infrastructure Provisioning
+
+### Networking & IPAM
+
+- IP Address Management
+- VLAN Management
+- VRF Management
+- DNS Automation
+- DHCP Automation
+- Datacenter Inventory
+
+### Kubernetes
+
+- Kubernetes Cluster Provisioning
+- Cluster Lifecycle Management
+- Integrated Infrastructure Services
+
+### Storage
+
+- ZFS Native Storage
+- Snapshots
+- Replication
+- Pool Management
+- Automated Storage Provisioning
+
+### Observability
+
+- Metrics Collection
+- Dashboards
+- Capacity Monitoring
+- Infrastructure Health Monitoring
+
+### Automation
+
+- REST APIs
+- Event-Driven Workflows
+- External Integrations
+- Infrastructure Automation
+
+---
+
+## Architecture
+
+KariosBSD is composed of multiple open-source projects that together form the platform.
 
 | Repository | Description |
-|---|---|
-| [karios-apis](./karios-apis) | Backend REST API — VM/jail management, networking, Kubernetes integration, monitoring |
-| [karios-web](./karios-web) | Web GUI (React / Nx monorepo) |
-| [karios-ipam](./karios-ipam) | IPAM/DDI orchestration library (NetBox + Technitium) |
-| [karios-atlas](./karios-atlas) | NetBox DCIM/IPAM Go SDK |
-| [karios-common](./karios-common) | Shared logging, tracing, metrics, and middleware library |
+|------------|-------------|
+| [karios-apis](https://github.com/karios-os/karios-apis) | Infrastructure orchestration APIs |
+| [karios-web](https://github.com/karios-os/karios-web) | Web management interface |
+| [karios-ipam](https://github.com/karios-os/karios-ipam) | IPAM and DDI orchestration |
+| [karios-common](https://github.com/karios-os/karios-common) | Shared platform libraries |
 
-Each component has its own README with setup, build, and environment
-variable details.
+Each repository contains its own development, build, and deployment documentation.
+
+---
 
 ## Documentation
 
-See each component's README for setup and usage instructions:
+Documentation includes:
 
-- [karios-apis](./karios-apis/README.md)
-- [karios-web](./karios-web/README.md)
-- [karios-ipam](./karios-ipam/README.md)
-- [karios-atlas](./karios-atlas/README.md)
-- [karios-common](./karios-common/README.md)
+- Installation Guides
+- Administration Guides
+- API References
+- Architecture Documentation
+- Hardware Compatibility Lists (HCL)
+- Troubleshooting Guides
+- Upgrade Guides
+
+---
 
 ## Community
 
-Issues, discussions, and contributions are welcome — see the issue tracker
-for each repository above.
+We welcome operators, developers, infrastructure engineers, and contributors.
+
+### Get Involved
+
+- Report bugs through GitHub Issues
+- Submit feature requests
+- Participate in Discussions
+- Improve Documentation
+- Contribute Code
+
+---
+
+## Licensing & Commercial Use
+
+KariosBSD is available under a dual-licensing model.
+
+### Community Edition
+
+Licensed under the:
+
+**GNU Affero General Public License v3 (AGPLv3)**
+
+If you modify KariosBSD and provide it as a network-accessible service, the AGPL requires those modifications to be made available under the same license.
+
+See LICENSE for complete terms.
+
+### Commercial Licensing
+
+Organizations requiring:
+
+- AGPL exemptions
+- Private modifications
+- Enterprise support
+- OEM redistribution rights
+- White-label options
+
+may obtain a commercial license.
+
+---
+
+## Support Options
+
+### Community Support
+
+- GitHub Discussions
+- Community Forums
+- Documentation
+
+### Professional Support
+
+- Business Hours Support
+- Deployment Assistance
+- Architecture Reviews
+
+### Enterprise Support
+
+- 24x7 Support
+- Emergency Response
+- Dedicated Engineering Assistance
+- Long-Term Maintenance
+
+---
+
+## Security
+
+Security is a core design principle of KariosBSD.
+
+Please do not report vulnerabilities through public GitHub issues.
+
+---
+
+## Contributing
+
+We welcome contributions from the community.
+
+Before contributing:
+
+1. Sign the Contributor License Agreement (CLA)
+2. Submit a Pull Request
+
+All submissions are reviewed by project maintainers.
+
+---
+
+## Trademarks
+
+"KariosBSD", "Karios", and associated logos may be protected trademarks.
+
+---
+
+## License
+
+Copyright © Karios Project
+
+Licensed under the GNU Affero General Public License v3.0.
+
+See LICENSE for complete terms.
