@@ -1,6 +1,6 @@
 # KariosOS
 
-[![License: AGPLv3](https://img.shields.io/badge/License-AGPLv3-blue.svg)]()
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]()
 [![Hypervisor: bhyve](https://img.shields.io/badge/Hypervisor-bhyve-red.svg)]()
 [![Storage: ZFS](https://img.shields.io/badge/Storage-ZFS-green.svg)]()
 [![Category: Infrastructure OS](https://img.shields.io/badge/Category-Infrastructure%20OS-orange.svg)]()
@@ -11,6 +11,8 @@
 KariosOS unifies virtualization, storage, networking, IP address management, Kubernetes orchestration, DNS/DHCP services, observability, and automation into a single platform with a common API and management experience.
 
 Instead of assembling and maintaining dozens of disconnected infrastructure products, operators can manage their entire environment through a unified control plane.
+
+We built this because we believe modern infrastructure shouldn't be locked behind restrictive corporate licensing or bloated roadmaps. Whether you are an agile startup architecting your first production environment or a global enterprise scaling to millions of concurrent users, KariosOS is engineered to grow with you.
 
 ---
 
@@ -176,54 +178,30 @@ We welcome operators, developers, infrastructure engineers, and contributors.
 
 ---
 
-## Licensing & Commercial Use
+## Open Source Promise: Apache 2.0 & No CLAs
 
-KariosBSD is available under a dual-licensing model.
+Great infrastructure software is a collaborative effort. If you contribute your time and expertise to the community, you should retain the rights to your work.
 
-### Community Edition
+**100% Apache 2.0 License.** No restrictive copyleft traps, no sudden licensing rug-pulls. Use, modify, embed, and run KariosOS anywhere you see fit.
 
-Licensed under the:
+**Zero CLAs.** We will never ask you to sign your copyright over to us. We use the industry-standard Developer Certificate of Origin (DCO) — the same model as the Linux kernel. You simply add a `Signed-off-by` line to your commits. If you write the code, you own the code.
 
-**GNU Affero General Public License v3 (AGPLv3)**
-
-If you modify KariosBSD and provide it as a network-accessible service, the AGPL requires those modifications to be made available under the same license.
-
-See LICENSE for complete terms.
-
-### Commercial Licensing
-
-Organizations requiring:
-
-- AGPL exemptions
-- Private modifications
-- Enterprise support
-- OEM redistribution rights
-- White-label options
-
-may obtain a commercial license.
+No developer should have to ask their legal department for permission to open a pull request.
 
 ---
 
-## Support Options
+## How We Keep the Lights On
 
-### Community Support
+KariosOS is an Open Core company. The core OS, high-performance routing engine, and APIs are licensed under Apache 2.0 and will remain free forever. We do not artificially throttle performance, cap resources, or cripple the open-source tier to force an upgrade — we want the community ecosystem to thrive unhindered.
 
-- GitHub Discussions
-- Community Forums
-- Documentation
+We fund the project by selling what we call the "enterprise glue" and providing engineering firepower to teams running mission-critical infrastructure:
 
-### Professional Support
+- **24x7x365 Production Support** — A direct line to the core engineering team when your cluster goes down at 3 AM on a Sunday. A forum post isn't going to save the day; we will.
+- **Enterprise Integrations** — Specialized plugins for SAML/SSO, Active Directory, advanced RBAC, and FIPS compliance modules.
+- **Customized Modules** — Purpose-built modules for proprietary hardware, legacy network topologies, or unique data pipelines.
+- **Professional Coding Services** — Our core engineers embed directly with your team to design, build, deploy, and scale your KariosOS infrastructure from day one.
 
-- Business Hours Support
-- Deployment Assistance
-- Architecture Reviews
-
-### Enterprise Support
-
-- 24x7 Support
-- Emergency Response
-- Dedicated Engineering Assistance
-- Long-Term Maintenance
+> If you are a hacker or a startup, KariosOS is completely free. If you are a Fortune 500 bank that needs someone to call at 3:00 AM, you pay us.
 
 ---
 
@@ -237,12 +215,11 @@ Please do not report vulnerabilities through public GitHub issues.
 
 ## Contributing
 
-We welcome contributions from the community.
+We welcome contributions from the community. PRs are officially welcome — no lawyers required.
 
-Before contributing:
+Before contributing, read [CONTRIBUTING.md](../CONTRIBUTING.md). The short version: sign your commits with `git commit -s` and open a PR.
 
-1. Sign the Contributor License Agreement (CLA)
-2. Submit a Pull Request
+Every PR uses the [Pull Request Template](../PULL_REQUEST_TEMPLATE.md) automatically — it includes the DCO sign-off checklist and review requirements.
 
 All submissions are reviewed by project maintainers.
 
@@ -254,10 +231,13 @@ All submissions are reviewed by project maintainers.
 
 ---
 
-## License
+## Legal & Licensing
 
-Copyright © Karios Project
+| Document | Description |
+|----------|-------------|
+| [LICENSE](../LICENSE) | Apache License 2.0 — the full license terms for KariosOS |
+| [CONTRIBUTING.md](../CONTRIBUTING.md) | How to contribute, DCO sign-off guide, and PR process |
+| [PULL_REQUEST_TEMPLATE.md](../PULL_REQUEST_TEMPLATE.md) | Checklist applied automatically to every pull request |
+| [FREEBSD-COPYRIGHT-NOTICE.txt](../FREEBSD-COPYRIGHT-NOTICE.txt) | FreeBSD copyright notice and attribution |
 
-Licensed under the GNU Affero General Public License v3.0.
-
-See LICENSE for complete terms.
+Copyright © 2026 KariosOS Contributors. Licensed under the Apache License, Version 2.0.

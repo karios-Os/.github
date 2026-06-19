@@ -39,7 +39,7 @@ KariosBSD uses the standard FreeBSD `bsdinstall` installer. Follow the
 on-screen prompts:
 
 1. Select your keyboard layout.
-2. Enter a hostname for the machine.
+2. Enter a hostname for the machine. (Follow sub-domain FQDN standards here)
 3. Select the components you want to install (defaults are fine for most
    setups).
 4. Choose a partitioning scheme (e.g. **Auto (ZFS)** is recommended).
@@ -63,9 +63,17 @@ on-screen prompts:
 After reboot, log in at the console with the `root` (or other) credentials
 you set during installation.
 
-From here, refer to the [karios-apis](https://github.com/karios-os/karios-apis/blob/main/README.md) and
-[karios-web](https://github.com/karios-os/karios-web/blob/main/README.md) READMEs to set up and run the Karios
-platform services on top of the freshly installed system.
+SSH into the node or work directly at the console, then run:
+
+1. Install Ansible:
+   ```sh
+   pkg install py311-ansible
+   ```
+
+2. Run the bootstrap script:
+   ```sh
+   ./bootstrap.sh
+   ```
 
 ## Troubleshooting
 
