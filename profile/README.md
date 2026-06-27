@@ -238,6 +238,7 @@ All submissions are reviewed by project maintainers.
 | Document | Description |
 |----------|-------------|
 | [LICENSE](../LICENSE) | Apache License 2.0 — the full license terms for KariosOS |
+| [NOTICE](../NOTICE) | Copyright notice and third-party attribution |
 | [CONTRIBUTING.md](../CONTRIBUTING.md) | How to contribute, DCO sign-off guide, and PR process |
 | [PULL_REQUEST_TEMPLATE.md](../PULL_REQUEST_TEMPLATE.md) | Checklist applied automatically to every pull request |
 | [FREEBSD-COPYRIGHT-NOTICE.txt](../FREEBSD-COPYRIGHT-NOTICE.txt) | FreeBSD copyright notice and attribution |

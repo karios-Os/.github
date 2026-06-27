@@ -98,7 +98,3 @@ _(Add instructions here on how to build the project locally, run tests, and spin
 If KariosOS has been useful to you, **starring the repo** is a great way to show your support and helps others discover the project.
 
 ---
-
-## Security Vulnerabilities
-
-Do not report security vulnerabilities through public GitHub Issues. See [SECURITY.md](../SECURITY.md) for the responsible disclosure process.
